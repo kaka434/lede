@@ -10,9 +10,9 @@
 name: kaka434
 
 on:
-  # push:
-  # branches: 
-  #   - master
+  push:
+    branches: 
+      - master
   # schedule:
   #   - cron: 0 20 * * *
   # release:
@@ -156,7 +156,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
             CONFIG_PACKAGE_luci-app-ttyd=y
-            CONFIG_PACKAGE_luci-app-samba=y
+            CONFIG_PACKAGE_luci-app-cifsd=y
             CONFIG_PACKAGE_luci-app-hd-idle=y
             CONFIG_PACKAGE_luci-app-vsftpd=y
           # CONFIG_PACKAGE_luci-app-v2ray-server=y
@@ -164,7 +164,8 @@ jobs:
             CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
             CONFIG_PACKAGE_luci-app-wrtbwmon=y
-          # EOF
+            CONFIG_PACKAGE_luci-app-firewall=y
+            EOF
 
           # LuCI主题:
             cat >> .config <<EOF
